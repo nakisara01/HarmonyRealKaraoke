@@ -11,7 +11,7 @@ import SwiftUI
 struct HarmonyKaraokeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            KaraokeLyricView()
         }
     }
 }
