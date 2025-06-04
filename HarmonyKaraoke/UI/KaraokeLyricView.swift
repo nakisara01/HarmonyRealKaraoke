@@ -13,18 +13,19 @@ struct KaraokeLyricView: View {
 
     // MARK: - State
     @State private var currentLineIndex: Int = 0
-    @State private var nextLineIndex: Int = 1
     @State private var currentLine: LyricLine = LyricLine(text: "내 여자 내 남자 - 배금성", timings: [0.00, 1.03, 1.3, 1.43, 1.65, 2.27, 2.57, 2.85, 3.07, 4.1, 4.4, 4.7, 5.0, 5.3, 5.7, 6.0])
-    @State private var nextLine: LyricLine = LyricLine(text: "배금성", timings: [0.00, 1.03, 1.3, 1.43])
     @State private var currentCharacterIndex: Int = 0
-    @State private var nextCharacterIndex: Int = 0
     @State private var currentCharacterProgress: CGFloat = 0.0
-    @State private var nextCharacterProgress: CGFloat = 0.0
     @State private var currentCharDuration: Double = 0.0
-    @State private var nextCharDuration: Double = 0.0
     @State private var startTime: Date = Date()
-    @State private var nextstartTime: Date = Date()
     @State private var countdown: Int? = nil
+    
+    @State private var nextLineIndex: Int = 1
+    @State private var nextLine: LyricLine = LyricLine(text: "배금성", timings: [0.00, 1.03, 1.3, 1.43])
+    @State private var nextCharacterIndex: Int = 0
+    @State private var nextCharacterProgress: CGFloat = 0.0
+    @State private var nextCharDuration: Double = 0.0
+    @State private var nextstartTime: Date = Date()
 
     let timer = Timer.publish(every: 0.016, on: .main, in: .common).autoconnect() // ~60fps
 
